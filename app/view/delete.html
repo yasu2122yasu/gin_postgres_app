@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta httpequiv="ContentType" content="text/html;charset=utf8">
+        <title>記事削除(ID:{{.book.ID}})</title>
+    </head>
+    <body>
+      <form method="POST" action="/delete" id="delete_form">
+        <input type="hidden" name="id" value="{{ .book.ID }}" />
+        <p>タイトル： {{.book.Title}}</p>
+        <p>本文：</p>
+        <p>{{.book.Body}}</p>
+        <h2>削除しますか？</h2>
+      </form>
+    <p>
+        <button type="submit" form="delete_form">削除</button>
+        <a href="/"><input type="button" value="キャンセル" /></a>
+    </p>
+    </body>
+</html>

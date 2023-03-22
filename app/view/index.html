@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta httpequiv="ContentType" content="text/html;charset=utf8">
+        <title>INDEX</title>
+    </head>
+    <body>
+        <h1>INDEX</h1>
+        {{ range .books }}
+        <p>{{ .ID }}: <a href="/show/{{.ID}}">{{.Title}}</a> / <a href="/edit/{{.ID}}">編集</a> / <a href="/delete/{{.ID}}">削除</a></p>
+        {{ end }}
+        <p><a href="/create">新規作成</a></p>
+    </body>
+</html>
