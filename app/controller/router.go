@@ -5,6 +5,7 @@ import (
 )
 
 func GetRouter() *gin.Engine {
+	gin.SetMode(gin.ReleaseMode)
 	r := gin.Default()
 	r.LoadHTMLGlob("view/*html")
 	r.GET("/", Index)
